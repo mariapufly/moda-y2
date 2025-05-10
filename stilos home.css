@@ -65,6 +65,9 @@ nav a:hover {
   animation: fadeInSection 1.2s ease;
 }
 
+/* ------------------------- text-block ------------------------- */
+
+
 .text-block {
   flex: 1;
   min-width: 300px;
