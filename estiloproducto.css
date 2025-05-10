@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  animation: fadeInBody 1.5s ease-in-out;
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  padding: 1em 0;
+  color: white;
+  text-shadow: 0 0 8px #c39bff;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+  padding: 1em 0;
+  gap: 3em;
+  box-shadow: 0 0 10px rgba(195, 155, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #c39bff;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #c39bff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+nav a:hover {
+  color: white;
+  text-shadow: 0 0 10px #c39bff, 0 0 20px #c39bff;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 3em;
+  margin: 1em 0;
+  color: white;
+  animation: fadeInSection 1s ease;
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.productos {
+  padding: 1em;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.item {
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #c39bff66;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.item p {
+  margin-top: 0.5em;
+  font-size: 1em;
+  color: white;
+  text-shadow: 0 0 5px #c39bff44;
+}
